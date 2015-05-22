@@ -1,0 +1,1 @@
+Just some perl golf solved by me

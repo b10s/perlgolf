@@ -1,0 +1,2 @@
+#!/usr/bin/perl
+$z=($y=pop)*($x=pop);@p=0..--$x;@l=1..--$y;$_='$a[$_][$j]=++$n,$r[$j]<$n?$r[$j]=$n:1for@l;@l=reverse@l;$k=shift@l;';y/lkj/pj_/,s/_/k/,eval,y/pj_/lkj/,s/k/_/,eval while$n<$z;for$i(0..$y){map{$f="%d\n";$t=length$r[$_];$t++,$f="%-${t}d"if$_<$x;printf$f,$a[$i][$_];}0..$x}
