@@ -1,0 +1,66 @@
+YAPC::Russia 2015 Perl golf
+===========================
+
+This is the **YAPC::Russia 2015** Perl golf competition repository. Here you can get tests, examples, the description (this _README_) and _the solutions_.
+
+Input
+-----
+
+Your script should accept two integer arguments:
+
+```perl
+perl script.pl 10 10
+```
+
+The first one is _width_, the second one is _height_.
+
+Output
+------
+
+Your script should print the spiral matrix of numbers to _STDOUT_. The matrix size is set by the input params.
+
+1. The first number is `1`.
+1. The order is clockwise.
+1. All columns must be separated by spaces (not tabs) and the gap between columns is exactly one space in the most narrow place.
+1. The align is left.
+1. Every string should be terminated by `\n`.
+1. No extra spaces are allowed.
+
+```
+1  2  3  4  5   6  7  8  9  10
+36 37 38 39 40  41 42 43 44 11
+35 64 65 66 67  68 69 70 45 12
+34 63 84 85 86  87 88 71 46 13
+33 62 83 96 97  98 89 72 47 14
+32 61 82 95 100 99 90 73 48 15
+31 60 81 94 93  92 91 74 49 16
+30 59 80 79 78  77 76 75 50 17
+29 58 57 56 55  54 53 52 51 18
+28 27 26 25 24  23 22 21 20 19
+
+```
+
+Commit your solution
+--------------------
+
+Since the competition is over, you are now free to send your solutions via pull-request. Please name it like `your_full_name.pl`.
+
+How to test
+-----------
+
+Place your script in the `solutions` directory.
+
+Run from the root of the repository:
+
+`perl t/spiral.t` — check all solutions
+
+`perl t/spiral.t pushtaev.pl` — check a single solution
+
+`perl bin/result.pl` — show the result table
+
+Or you can [install docker](https://docs.docker.com/installation/) to run the tests in prepared environment:
+
+    $ docker build --tag golf .
+    $ docker run --rm golf
+    338     bronton.pl
+    2483    pushtaev.pl
